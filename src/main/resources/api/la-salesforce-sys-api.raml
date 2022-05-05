@@ -1,0 +1,43 @@
+#%RAML 1.0
+title: la-salesforce-sys-api
+mediaType: 
+- application/json
+types:
+  CustomErrorMessage : !include datatypes/CustomErrorMessage.raml
+  customer : !include datatypes/customer.raml
+  payment : !include datatypes/payment.raml
+
+/customer :
+  post:
+    description: post the specific netsuite id of that customer
+    responses:
+       201:
+        body: 
+         application/json:
+           type: customer
+           example: !include examples/customer.raml
+       503:
+        body:
+          application/json:
+            type: CustomErrorMessage
+            example: !include examples/customErrorMessage.raml
+              
+ 
+         
+/payment :
+  post:
+    description: post the payment information  
+    displayName: post the payment information
+    responses:
+       201:
+        body: 
+         application/json:
+           type: payment
+           example: !include examples/payment.raml
+       503:
+        body:
+          application/json:
+            type: CustomErrorMessage
+            example: !include examples/customErrorMessage.raml
+ 
+

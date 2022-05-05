@@ -1,0 +1,13 @@
+%dw 2.0
+
+type auto_d71676ad_3b81_4da3_b470_5ac635a68e0f_Output_Payload = {
+  koreps__Payment_Option__c: String, 
+  koreps__Total_Contract_Gross__c: String, 
+  OwnerId: String, 
+  Seat__c: String, 
+  koreps__Payment_Terms__c: String, 
+  koreps__Approval_Status__c: String, 
+  "koreps__Start_Season__c & koreps__End_Season__c": String, 
+  _?: Any
+}
+
